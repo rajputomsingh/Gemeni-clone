@@ -1,0 +1,207 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  position: relative;
+
+}
+
+.main .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+  padding: 20px;
+  color: #585858;
+}
+
+.main .nav img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.main-container {
+  flex: 1; /* Expands to fill remaining space */
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto; /* Center horizontally */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container .greet {
+  margin: 20px 0;
+  font-size: 56px;
+  color: #c4c7c5;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.main-container .greet span {
+  background: linear-gradient(16deg, #4b90ff, #ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-container .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  width: 100%;
+  padding: 20px;
+}
+
+.main-container .card {
+  height: 200px;
+  padding: 20px;
+  background-color: #f0f4f9;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main-container .card img {
+  width: 35px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.main-container .card p {
+  color: #585858;
+  font-size: 17px;
+}
+
+.main-container .card:hover {
+  background-color: #d1dae6;
+}
+
+.main-bottom {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  margin: auto;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f0f4f9;
+  padding: 10px 20px;
+  border-radius: 50px;
+  width: 100%;
+}
+
+.search-box img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.main-container .bottom-info {
+  font-size: 13px;
+  margin: 15px auto;
+  text-align: center;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.result {
+  flex-grow: 1; /* Expand to fill space */
+  width: 100%;
+  padding: 0 5%;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.result::-webkit-scrollbar {
+  display: none;
+}
+
+.result-title {
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.result img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.result-data {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loader hr {
+  border-radius: 4px;
+  border: none;
+  background: linear-gradient(to right, #4b90ff, #e5e6f8);
+  background-size: 800px 50px;
+  height: 20px;
+  animation: loaderAnimation 2s infinite linear;
+}
+
+.loader hr:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
+  background-size: 1200px 50px;
+}
+
+@keyframes loaderAnimation {
+  0% {
+      background-position: -800px 0;
+  }
+  100% {
+      background-position: 800px 0;
+  }
+}
+
+
+.image-preview {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.image-preview img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px; /* Rounded corners */
+  padding: 4px; /* Adds padding inside the border */
+  border: 2px solid #ddd; /* Light gray border around the image */
+  background-color: white; /* Background for the border box */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.main-container .greet span {
+  background: linear-gradient(16deg, #4b90ff, #ff5546);
+  -webkit-background-clip: text; /* Safari, Chrome */
+  -moz-background-clip: text;    /* Firefox (older versions) */
+  background-clip: text;         /* Standard */
+  -webkit-text-fill-color: transparent; /* Ensures text is only visible within the gradient */
+}

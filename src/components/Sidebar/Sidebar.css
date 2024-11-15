@@ -1,0 +1,117 @@
+/* Sidebar Base Styles */
+.Sidebar {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 75px 40px;
+    width: 75px;  /* Set a narrower width for collapsed state */
+    transition: width 0.4s ease;  /* Smooth sliding effect */
+    overflow: hidden;  /* Hide overflow when collapsed */
+    align-items: center;
+}
+
+.Sidebar.extended {
+    width: 250px;  /* Extended width */
+    padding: 75px 20px;  /* Adjust padding for extended view */
+}
+
+/* Sidebar Menu Icon */
+.Sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+/* Sidebar Icon Styling */
+.Sidebar img {
+    width: 20px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Icon Hover Animation */
+.Sidebar img:hover {
+    transform: scale(1.15) rotate(5deg); /* Slight scale and rotation */
+    filter: brightness(1.2); /* Lighten icon on hover */
+}
+
+/* New Chat Button Styling */
+.Sidebar .new-chat {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* New Chat Hover Effect */
+.Sidebar .new-chat:hover {
+    background-color: #d4d9e1;
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Recent Items Styling */
+.Sidebar .recent {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.Sidebar .recent-entry {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Sidebar .recent-entry:hover {
+    background-color: #e2e6eb;
+    transform: scale(1.02); /* Slight scale effect */
+}
+
+/* Bottom Items Styling */
+.Sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sidebar .bottom-item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Bottom Items Hover Effect */
+.Sidebar .bottom-item:hover {
+    background-color: #ffffff;
+    transform: scale(1.02);
+}
+
+/* Bottom Item Icon Hover Effect */
+.Sidebar .bottom-item img:hover {
+    transform: scale(1.15) rotate(-5deg); /* Slight scale and rotation */
+    filter: brightness(1.2); /* Brighten icon on hover */
+}
